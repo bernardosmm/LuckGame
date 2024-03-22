@@ -1,1 +1,1 @@
-![Descrição da imagem](desktop/--help.png)
+![Descrição da imagem](--help.png)
