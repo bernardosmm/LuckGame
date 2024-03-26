@@ -1,1 +1,4 @@
-<img src="https://github.com/bernardosmm/LuckGame/commit/5b61189ed63ada04cab995354641e98e0cf5d882">
+<img src="help.png">
+<img src="sorteio.png">
+<img src="bingo.png">
+<img src="mega sena.png">
