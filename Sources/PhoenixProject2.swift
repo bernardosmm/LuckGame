@@ -24,13 +24,13 @@ luckGame [OPTIONS]
 Esta ferramenta foi criada para gerar números aleatórios para diversos propósitos. Ao inserir apenas o nome da categoria (como Mega Sena ou Bingo) e uma semente pessoal (uma chave única de sua escolha), o Luck Game gera um número aleatório. A parte mais legal deste programa é a forma mais rápida de tomar decisões.
 """)
     
-    @Flag(name: .short, help: "Create your own raffle")
+    @Flag(name: .short, help: "Crie seu próprio sorteio")
     var raffle: Bool = false
     
-    @Flag (name: .short, help: "Play bingo")
+    @Flag (name: .short, help: "Jogue Bingo")
     var bingo: Bool = false
     
-    @Flag (name: .short, help: "Your megasena game")
+    @Flag (name: .short, help: "Números para Mega Sena")
     var megaSena: Bool = false
     
     func runBingo() {
