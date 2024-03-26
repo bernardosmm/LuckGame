@@ -21,7 +21,7 @@ luckGame [OPTIONS]
 ██║     ██║   ██║██║     ██╔═██╗     ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝
 ███████╗╚██████╔╝╚██████╗██║  ██╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗
 ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
-Esta ferramenta foi criada para gerar números aleatórios para diversos propósitos. Ao inserir apenas o nome da categoria (como Mega Sena ou Bingo) e uma semente pessoal (uma chave única de sua escolha), o Luck Game gera um número aleatório. A parte mais legal deste programa é a forma mais rápida de tomar decisões.
+Esta ferramenta foi criada para gerar números aleatórios para diversos propósitos. Ao inserir apenas o nome da categoria (como Mega Sena ou Bingo) e uma semente pessoal (uma chave única de sua escolha), o Luck Game gera um número aleatório. A parte mais legal deste programa é a forma mais rápida de tomar decisões e criar seus próprios jogos.
 """)
     
     @Flag(name: .short, help: "Crie seu próprio sorteio")
