@@ -1,6 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
-// 
+//
 // Swift Argument Parser
 // https://swiftpackageindex.com/apple/swift-argument-parser/documentation
 
@@ -8,61 +8,80 @@ import ArgumentParser
 import Foundation
 
 @main
-struct SweespsTakes: ParsableCommand {
+struct LuckGame: ParsableCommand {
     static var configuration = CommandConfiguration(
         abstract: "Random Number Generator",
         usage:"""
-sweepstakes [OPTIONS]
+luckGame [OPTIONS]
 """,
         discussion: """
-This tool is created to generate random numbers for various purposes. By inputting only the category name (such as MegaSena or Bingo) and a personal seed (a unique key of your choice), NumGen generates a random number. This coolest part of this of this programis the faster way to make to make decisions
+██╗     ██╗   ██╗ ██████╗██╗  ██╗     ██████╗  █████╗ ███╗   ███╗███████╗
+██║     ██║   ██║██╔════╝██║ ██╔╝    ██╔════╝ ██╔══██╗████╗ ████║██╔════╝
+██║     ██║   ██║██║     █████╔╝     ██║  ███╗███████║██╔████╔██║█████╗
+██║     ██║   ██║██║     ██╔═██╗     ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝
+███████╗╚██████╔╝╚██████╗██║  ██╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗
+╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
+This tool is created to generate random numbers for various purposes. By inputting only the category name (such as MegaSena or Bingo) and a personal seed (a unique key of your choice), Luck Game generates a random number. This coolest part of this of this programis the faster way to make to make decisions
 """)
     
-    @Flag(name: .short, help: "Your own Sweesptake")
+    @Flag(name: .short, help: "Create your own raffle")
     var raffle: Bool = false
     
-    @Flag (name: .short, help: "your bingo game")
+    @Flag (name: .short, help: "Play bingo")
     var bingo: Bool = false
     
     @Flag (name: .short, help: "Your megasena game")
     var megaSena: Bool = false
     
     func runBingo() {
+        print("""
+               ██████╗ ██╗███╗   ██╗ ██████╗  ██████╗
+               ██╔══██╗██║████╗  ██║██╔════╝ ██╔═══██╗
+               ██████╔╝██║██╔██╗ ██║██║  ███╗██║   ██║
+               ██╔══██╗██║██║╚██╗██║██║   ██║██║   ██║
+               ██████╔╝██║██║ ╚████║╚██████╔╝╚██████╔╝
+               ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝
+""")
         var numbersArray = Array(1...75)
         numbersArray.shuffle()
         for number in numbersArray {
             switch number {
             case 1..<16:
-                print(/(number)"Coluna B", terminator: "")
-            case 1..<16:
-                print(/(number)"Coluna B", terminator: "")
-            case 1..<16:
-                print(/(number)"Coluna B", terminator: "")
-            case 1..<16:
-                print(/(number)"Coluna B", terminator: "")
+                print("\(number), Coluna B", terminator: " ")
+            case 16..<31:
+                print("\(number), Coluna I", terminator: " ")
+            case 31..<46:
+                print("\(number), Coluna N", terminator: " ")
+            case 46..<61:
+                print("\(number), Coluna G", terminator: " ")
+            case 61..<75:
+                print("\(number), Coluna O", terminator: " ")
+            default:
+                break
+            }
+            
+            let input = readLine()!
+            print ("Se alguem bater aperte b\n")
+            
+            
+            if input == "b"{
+                print("PARABÉNS!!!")
+                return
                 
             }
             
-            
-                
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            print(number, terminator: "")
-            let _ = readLine()!
         }
     }
     func runRaffle() {
-        print(
+        print("""
+██████╗  █████╗ ███████╗███████╗██╗     ███████╗
+██╔══██╗██╔══██╗██╔════╝██╔════╝██║     ██╔════╝
+██████╔╝███████║█████╗  █████╗  ██║     █████╗
+██╔══██╗██╔══██║██╔══╝  ██╔══╝  ██║     ██╔══╝
+██║  ██║██║  ██║██║     ██║     ███████╗███████╗
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚══════╝
+
+""")
         print("Qual é o número mínimo do intervalo?")
         guard let input1 = readLine(), let n1 = Int(input1) else {
             fatalError("Entrada inválida para o número mínimo do intervalo")
@@ -89,8 +108,18 @@ This tool is created to generate random numbers for various purposes. By inputti
         print("Os números sorteados são: \(randomNumbers)")
     }
     func runMegaSena() {
+        print("""
+███╗   ███╗███████╗ ██████╗  █████╗     ███████╗███████╗███╗   ██╗ █████╗
+████╗ ████║██╔════╝██╔════╝ ██╔══██╗    ██╔════╝██╔════╝████╗  ██║██╔══██╗
+██╔████╔██║█████╗  ██║  ███╗███████║    ███████╗█████╗  ██╔██╗ ██║███████║
+██║╚██╔╝██║██╔══╝  ██║   ██║██╔══██║    ╚════██║██╔══╝  ██║╚██╗██║██╔══██║
+██║ ╚═╝ ██║███████╗╚██████╔╝██║  ██║    ███████║███████╗██║ ╚████║██║  ██║
+╚═╝     ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝    ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝
+
+""")
         let megaSenaNumbers = runMegaSena()
         print("Os números sorteados na Mega-Sena são: \(megaSenaNumbers)")
+        print("BOA SORTE!!!")
         return
         func runMegaSena() -> [Int] {
             var numberMega = Array(1...60)
