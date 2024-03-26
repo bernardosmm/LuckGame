@@ -21,7 +21,7 @@ luckGame [OPTIONS]
 ██║     ██║   ██║██║     ██╔═██╗     ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝
 ███████╗╚██████╔╝╚██████╗██║  ██╗    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗
 ╚══════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
-This tool is created to generate random numbers for various purposes. By inputting only the category name (such as MegaSena or Bingo) and a personal seed (a unique key of your choice), Luck Game generates a random number. This coolest part of this of this programis the faster way to make to make decisions
+Esta ferramenta foi criada para gerar números aleatórios para diversos propósitos. Ao inserir apenas o nome da categoria (como Mega Sena ou Bingo) e uma semente pessoal (uma chave única de sua escolha), o Luck Game gera um número aleatório. A parte mais legal deste programa é a forma mais rápida de tomar decisões.
 """)
     
     @Flag(name: .short, help: "Create your own raffle")
@@ -42,6 +42,7 @@ This tool is created to generate random numbers for various purposes. By inputti
                ██████╔╝██║██║ ╚████║╚██████╔╝╚██████╔╝
                ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚═════╝
 """)
+        print("Para chamar o próximo número tecle enter")
         var numbersArray = Array(1...75)
         numbersArray.shuffle()
         for number in numbersArray {
@@ -61,7 +62,7 @@ This tool is created to generate random numbers for various purposes. By inputti
             }
             
             let input = readLine()!
-            print ("Se alguem bater aperte b\n")
+            print("Se alguem bater aperte b\n")
             
             
             if input == "b"{
@@ -74,12 +75,12 @@ This tool is created to generate random numbers for various purposes. By inputti
     }
     func runRaffle() {
         print("""
-██████╗  █████╗ ███████╗███████╗██╗     ███████╗
-██╔══██╗██╔══██╗██╔════╝██╔════╝██║     ██╔════╝
-██████╔╝███████║█████╗  █████╗  ██║     █████╗
-██╔══██╗██╔══██║██╔══╝  ██╔══╝  ██║     ██╔══╝
-██║  ██║██║  ██║██║     ██║     ███████╗███████╗
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚══════╝
+███████╗ ██████╗ ██████╗ ████████╗███████╗██╗ ██████╗
+██╔════╝██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██║██╔═══██╗
+███████╗██║   ██║██████╔╝   ██║   █████╗  ██║██║   ██║
+╚════██║██║   ██║██╔══██╗   ██║   ██╔══╝  ██║██║   ██║
+███████║╚██████╔╝██║  ██║   ██║   ███████╗██║╚██████╔╝
+╚══════╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝ ╚═════╝
 
 """)
         print("Qual é o número mínimo do intervalo?")
@@ -142,4 +143,5 @@ This tool is created to generate random numbers for various purposes. By inputti
     }
     
 }
+
 
