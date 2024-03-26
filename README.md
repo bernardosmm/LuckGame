@@ -1,4 +1,4 @@
-<img width="1437" alt="--help" src="https://github.com/bernardosmm/LuckGame/assets/130390914/84abff90-a2aa-42a1-ae9b-c808e62bda89">
-<img src="https://github.com/bernardosmm/LuckGame/blob/main/-b.png">
-<img src="https://github.com/bernardosmm/LuckGame/blob/main/-m.png">
-<img src="https://github.com/bernardosmm/LuckGame/blob/main/-r.png">
+<img width="1437" alt="--help" src="https://github.com/bernardosmm/LuckGame/commit/5b61189ed63ada04cab995354641e98e0cf5d882">
+<img src="https://github.com/bernardosmm/LuckGame/commit/5b61189ed63ada04cab995354641e98e0cf5d882">
+<img src="https://github.com/bernardosmm/LuckGame/commit/5b61189ed63ada04cab995354641e98e0cf5d882">
+<img src="https://github.com/bernardosmm/LuckGame/commit/5b61189ed63ada04cab995354641e98e0cf5d882">
